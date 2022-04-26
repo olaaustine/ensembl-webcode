@@ -142,7 +142,7 @@ sub gene_phenotypes {
       push @columns, { key => 'study', align => 'left', title => 'Study' , align => 'left', sort => 'html' };
     }
     if ($has_allelic == 1) {
-      push @columns, { key => 'allelic', align => 'left', title => 'Allelic requirement' , help => 'Allelic status associated with the disease (monoallelic, biallelic, etc)' };
+      push @columns, { key => 'allelic', align => 'left', title => 'Allelic requirement' , help => 'Mode of inheritance' };
     }
 
     $html .= $self->new_table(\@columns, \@rows, { data_table => 'no_sort no_col_toggle', sorting => [ 'phenotype asc' ], exportable => 1 })->render;
